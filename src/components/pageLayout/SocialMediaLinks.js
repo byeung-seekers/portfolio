@@ -6,14 +6,14 @@ const SocialMediaLinks = () => {
   return (
     <ul className={socialMediaLinks.linksContainer}>
       <li>
-        <a href={`mailto:${process.env.EMAIL}`}>Email</a>
+        <a href={`mailto:${process.env.GATSBY_EMAIL}`}>Email</a>
       </li>
       <li>
-        <a href={`tel:${process.env.MOBILE}`}>Mobile</a>
+        <a href={`tel:${process.env.GATSBY_MOBILE}`}>Mobile</a>
       </li>
       <li>
         <a
-          href={process.env.LINKEDIN}
+          href={process.env.GATSBY_LINKEDIN}
           target="_blank"
           rel="noopener noreferrer"
         >
