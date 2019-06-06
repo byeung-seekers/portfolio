@@ -1,0 +1,58 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.icon {
+  z-index: $mobileMenuIcon;
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  font-size: 0px;
+  transition: 0.2s ease-in;
+
+  @include phone-A {
+    display: block;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.line {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  user-select: none;
+  background: $white;
+  border-radius: 1px;
+  transition: 0.2s ease-in;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    height: 4px;
+    width: 100%;
+    background: $white;
+    border-radius: 1px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 4px;
+    width: 100%;
+    background: $white;
+    border-radius: 1px;
+  }
+}
+
+.lineActive {
+}

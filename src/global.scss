@@ -1,0 +1,36 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  max-width: 820px;
+  margin: 50px auto 30px auto;
+  padding: 0 25px;
+  background: $background;
+  font-family: "Fira Sans", "Open Sans", sans-serif;
+  color: $white;
+  font-size: 16px;
+
+  @include tablet-B {
+    margin: 30px auto 30px auto;
+    font-size: 14px;
+  }
+
+  ::selection {
+    background: $textSelection;
+  }
+  ::-moz-selection {
+    background: $textSelection;
+  }
+}

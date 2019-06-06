@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.container {
+  list-style-type: none;
+
+  li {
+    margin: 20px 0;
+  }
+}
+
+.certificate {
+  padding-left: 8px;
+  color: $textSecondary;
+}

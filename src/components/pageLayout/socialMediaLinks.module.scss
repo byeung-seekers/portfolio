@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.linksContainer {
+  display: flex;
+  list-style-type: none;
+  margin-top: 20px;
+
+  @include phone-A {
+    margin-bottom: 20px;
+  }
+
+  li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $brandPrimary;
+  }
+}

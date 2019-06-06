@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.container {
+  list-style-type: none;
+
+  li:not(:last-child) {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    @include phone-A {
+      flex-direction: column;
+      justify-content: initial;
+    }
+  }
+}
+
+.schools {
+  color: $brandPrimary;
+}
+
+.periodAndLocations {
+  @include phone-A {
+    padding-top: 5px;
+  }
+}
+
+.periodAndLocations,
+.languages {
+  color: $textSecondary;
+}

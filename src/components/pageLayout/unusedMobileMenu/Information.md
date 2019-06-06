@@ -1,0 +1,1 @@
+Rather than using a mobile hamburger menu, as I initially planned for, I opted for a horizontally scrolled navigation bar for both desktop and mobile, as I believe it is more convenient and intuitive for the end user this way.

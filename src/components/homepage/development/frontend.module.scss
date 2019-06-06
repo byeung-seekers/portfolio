@@ -1,0 +1,53 @@
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
+.listContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 10px 0 20px 0;
+
+  @include tablet-C {
+    justify-content: initial;
+    margin: 0 0 10px 0;
+  }
+
+  .languageList {
+    @include tablet-C {
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        color: $textPrimary;
+
+        &:not(:first-child) {
+          padding-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.language {
+  display: block;
+  font-weight: 700;
+  color: $brandPrimary;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $brandSecondary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

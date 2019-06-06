@@ -1,0 +1,27 @@
+@import "../../mixins.scss";
+
+.skillsContainer {
+  margin: 20px 0 40px 0;
+}
+
+.frontendTitle {
+  font-weight: 700;
+}
+
+.BCD {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & > * {
+    @include tablet-C {
+      margin-top: 10px;
+    }
+  }
+
+  & > *:not(:last-child) {
+    @include tablet-C {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.techLink {
+  padding-bottom: 10px;
+  border-bottom: 2px solid $textTertiary;
+}
+
+.skill {
+  font-weight: 700;
+}
+
+.website {
+  padding-right: 8px;
+  color: $textPrimary;
+}
+
+.link {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  text-decoration: none;
+  color: $brandPrimary;
+}

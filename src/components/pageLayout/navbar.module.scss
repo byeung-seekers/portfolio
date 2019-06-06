@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  margin: 30px 0;
+
+  @include phone-A {
+    overflow-y: hidden;
+    margin: 10px 0;
+    padding: 20px 0;
+    border-right: 2px solid $textTertiary;
+  }
+
+  li:not(:last-child) {
+    margin-right: 20px;
+
+    @include tablet-C {
+      margin-right: 12.5px;
+    }
+
+    @include phone-A {
+      margin-right: 20px;
+    }
+  }
+
+  li:last-child {
+    @include phone-A {
+      padding-right: 15px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: $textPrimary;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 2px solid $textPrimary;
+    }
+  }
+
+  .activePage {
+    pointer-events: none;
+    border-bottom: 2px solid $brandPrimary;
+    font-weight: 700;
+    color: $brandPrimary;
+  }
+}
