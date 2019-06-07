@@ -18,66 +18,116 @@ const ProjectsPage = ({ data }) => {
       />
       <div>
         <Header title="Websites &#128376;" />
-        <a
-          href="https://photos.app.goo.gl/iPDgf3AXrgeu5NWS7"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Img
-            className={projectStyles.image}
-            fixed={data.imageOne.childImageSharp.fixed}
-          />
-        </a>
-        <a
-          href="https://photos.app.goo.gl/NeM47gUJftVmZBV36"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Img
-            className={projectStyles.image}
-            fixed={data.imageTwo.childImageSharp.fixed}
-          />
-        </a>
-        <a
-          href="https://photos.app.goo.gl/kPbHJuMfYXVF29di7"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Img
-            className={projectStyles.image}
-            fixed={data.imageThree.childImageSharp.fixed}
-          />
-        </a>
-        <a
-          href="https://photos.app.goo.gl/fZWZKDukvzxB9i6T9"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Img
-            className={projectStyles.image}
-            fixed={data.imageFour.childImageSharp.fixed}
-          />
-        </a>
-        <a
-          href="https://photos.app.goo.gl/JeeprLLze49nfPNVA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Img
-            className={projectStyles.image}
-            fixed={data.imageFive.childImageSharp.fixed}
-          />
-        </a>
-        <a
-          href="https://photos.app.goo.gl/DvAkWoEihJJFko887"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Img
-            className={projectStyles.image}
-            fixed={data.imageSix.childImageSharp.fixed}
-          />
-        </a>
+        <div className={projectStyles.originalWebsites}>
+          <h3 className={projectStyles.subheading}>Original Websites</h3>
+          <div>
+            <a
+              href="https://photos.app.goo.gl/iPDgf3AXrgeu5NWS7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.imageOne.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/NeM47gUJftVmZBV36"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.imageTwo.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/kPbHJuMfYXVF29di7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.imageThree.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/fZWZKDukvzxB9i6T9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.imageFour.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/JeeprLLze49nfPNVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.imageFive.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/DvAkWoEihJJFko887"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.imageSix.childImageSharp.fixed}
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 className={projectStyles.subheading}>
+            Website coded based on existing designs. All credit goes to{" "}
+            <a
+              href="https://www.udemy.com/advanced-css-and-sass/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jonas Schmedtmann.
+            </a>
+          </h3>
+          <div>
+            <a
+              href="https://photos.app.goo.gl/SvxCHr68u1BZYLht7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.natours.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/XTmuXzMnD6MX6e5K9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.nexter.childImageSharp.fixed}
+              />
+            </a>
+            <a
+              href="https://photos.app.goo.gl/H5KMh39zySR576BAA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={projectStyles.image}
+                fixed={data.trillo.childImageSharp.fixed}
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
       <div>
@@ -244,6 +294,15 @@ export const pageQuery = graphql`
       ...fixedImage
     }
     imageSix: file(relativePath: { eq: "PIVOT.jpg" }) {
+      ...fixedImage
+    }
+    natours: file(relativePath: { eq: "Natours.png" }) {
+      ...fixedImage
+    }
+    trillo: file(relativePath: { eq: "Trillo.png" }) {
+      ...fixedImage
+    }
+    nexter: file(relativePath: { eq: "Nexter.png" }) {
       ...fixedImage
     }
     imageSeven: file(relativePath: { eq: "Studying.jpg" }) {

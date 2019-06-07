@@ -6,9 +6,7 @@
   height: 300px !important;
   max-width: 380px;
   margin: 0 5px 0 0;
-  object-fit: cover;
-  object-position: 50% 50%;
-  transition: 0.2s ease-in;
+  transition: 0.2s ease-out;
 
   &:hover {
     opacity: 0.8;
@@ -25,6 +23,7 @@
   }
 }
 
+.originalWebsites,
 .originalIllustrations {
   margin-bottom: 35px;
 }
