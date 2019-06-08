@@ -1,15 +1,10 @@
 # Personal Portfolio Resume Website
 
-<<<<<<< HEAD
 ![Personal Website Image](https://cdn.dribbble.com/users/2717568/screenshots/6599629/byeungresume-small.jpg)
-=======
-![Personal Website Image](https://photos.app.goo.gl/VnsK7Sexof82SC4s6)
->>>>>>> 9b06bf4430319e34b2a4e9c6212d43bd5997b252
 
 ## Live Demo 🚀
 
 https://beewai.com
-<<<<<<< HEAD
 
 ## Technologies 🎛
 
@@ -30,5 +25,3 @@ To run this project, from the root directory `/byeung-resume`, enter the followi
 $ npm install
 $ npm run develop
 ```
-=======
->>>>>>> 9b06bf4430319e34b2a4e9c6212d43bd5997b252
