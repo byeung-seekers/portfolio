@@ -1,30 +1,25 @@
 import React from "react"
 
-// import PageLayout from "../components/pageLayout/PageLayout"
-// import HelmetHeader from "../components/pageLayout/Helmet"
-// import PersonalStatement from "../components/homepage/PersonalStatement"
-// import TechProjects from "../components/homepage/TechProjects"
+import SEO from "../components/SEO/SEO.component"
+import Name from "../components/Pages/HomePage/Name/Name.component"
+import Decorations from "../components/Layout/Decorations/Decorations.component"
+import Modal from "../components/Pages/HomePage/Modal/Modal.component"
+import Thumbnails from "../components/Pages/HomePage/Thumbnails/Thumbnails.component"
+import Contact from "../components/Pages/HomePage/Contact/Contact.component"
+import Footer from "../components/Pages/HomePage/Footer/Footer.component"
 
-// import "../global.scss"
-// import indexStyles from "./index.module.scss"
+const HomePage = () => (
+  <>
+    <SEO />
+    <main>
+      <Name />
+      <Decorations />
+      <Modal />
+      <Thumbnails />
+      <Contact />
+      <Footer />
+    </main>
+  </>
+)
 
-const IndexPage = () => {
-  return (
-    <p>Domain reserved {new Date().getFullYear()}.</p>
-    // <PageLayout>
-    //   <HelmetHeader
-    //     title="Home"
-    //     description="Homepage for Benjamin Yeung's resume portfolio website."
-    //     keyWords="benjamin,yeung,resume,portfolio,homepage,html,css,javascript,react,adobe"
-    //   />
-    //   <h2 className={indexStyles.tagline}>
-    //     Aspiring front-end web designer/developer with experiences in
-    //     HTML/CSS/JS/React and Adobe Suite.
-    //   </h2>
-    //   <PersonalStatement />
-    //   <TechProjects />
-    // </PageLayout>
-  )
-}
-
-export default IndexPage
+export default HomePage

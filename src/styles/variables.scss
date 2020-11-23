@@ -1,0 +1,49 @@
+// fonts
+$averiaSansLibre: "AveriaSansLibre";
+$dosis: "Dosis";
+
+@mixin averiaSansLibreRegular {
+  font-family: $averiaSansLibre, sans-serif;
+  font-weight: 400;
+}
+
+@mixin averiaSansLibreBold {
+  font-family: $averiaSansLibre, sans-serif;
+  font-weight: 700;
+}
+
+@mixin dosisMedium {
+  font-family: $dosis, sans-serif;
+  font-weight: 500;
+}
+
+// layer hierarchy
+$zIndex-top: 999;
+$zIndex-1: 50;
+$zIndex-2: 1;
+$zIndex-3: 0.5;
+$zIndex-bottom: -999;
+
+// UI colors
+$bg: #181818;
+$black: black;
+$white: white;
+$yellow: #ffe200;
+
+// header
+$statusDotTransparentBg: rgba(255, 255, 255, 0.15);
+
+// decorations
+$paperGradientLight: #e8e8ea;
+$paperGradientDark: #efefef;
+$penUpperBorderBottom: #bebebe;
+$penClipBorderRight: #dcdcdc;
+$ballpointBackground: #5b5b5b;
+$ballpointInk: #151515;
+$coffeeDark: #1e1408;
+$coffeeLight: #7b6047;
+$airpodsBorder: whitesmoke;
+$airpodsDot: yellowgreen;
+
+// modal
+$modalUIgray: darkgray;
