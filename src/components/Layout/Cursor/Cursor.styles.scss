@@ -1,0 +1,12 @@
+.cursor {
+  z-index: $zIndex-top;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 40px;
+  background-color: $white;
+  mix-blend-mode: difference;
+  will-change: transform;
+}

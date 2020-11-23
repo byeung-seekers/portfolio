@@ -1,0 +1,87 @@
+header {
+  z-index: $zIndex-2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.3px;
+
+  @include mq499 {
+    justify-content: flex-end;
+    padding-right: 1.5px;
+  }
+
+  .memoji-container {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 103px;
+    width: 103px;
+    user-select: none;
+    transform-origin: top left;
+    border-radius: 100%;
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, 0.035);
+
+    .memoji {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 66%;
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    .status-dot {
+      position: absolute;
+      right: 4px;
+      bottom: 4px;
+      height: 19px;
+      width: 19px;
+      border-radius: 100px;
+
+      // status dot outer ring
+      &:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        height: 140%;
+        width: 140%;
+        border-radius: 100px;
+        background-color: $statusDotTransparentBg;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .message {
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 20px);
+      transform: translateY(-50%);
+
+      h3 {
+        width: max-content;
+        padding: 7px 23px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 18px;
+        background-color: $white;
+        transform-origin: bottom left;
+        letter-spacing: -0.45px;
+        @include averiaSansLibreRegular();
+        font-size: 15px;
+        color: $black;
+      }
+    }
+  }
+}

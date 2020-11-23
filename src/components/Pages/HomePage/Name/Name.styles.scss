@@ -1,0 +1,58 @@
+.name-container {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  .name-mask {
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 1.5px;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+
+      span {
+        display: inline-block;
+        line-height: 0.82;
+        letter-spacing: -1.1px;
+        @include dosisMedium;
+        font-size: 120px;
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    opacity: 0.6;
+    color: $white;
+
+    .info-mask {
+      overflow: hidden;
+
+      &:not(:last-of-type) {
+        margin-bottom: 3px;
+      }
+
+      h3 {
+        padding: 0 2px;
+        width: 100%;
+        user-select: none;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.37px;
+        @include dosisMedium();
+        font-size: 9.5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+.thumbnails-section {
+  display: flex;
+  justify-content: center;
+  will-change: transform;
+}
+
+.thumbnails {
+  position: relative;
+  margin-top: 85vh;
+  padding-bottom: 110px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-row-gap: 200px;
+  grid-column-gap: 80px;
+
+  @include mq1557 {
+    grid-row-gap: 140px;
+    grid-column-gap: 55px;
+  }
+
+  @include mq1225 {
+    grid-template-columns: max-content;
+    grid-row-gap: 70px;
+  }
+
+  // Pocket Trader
+  & > *:first-child {
+    transform: rotate(-2deg) translateY(-10px);
+  }
+
+  // Game Changer
+  & > *:nth-child(2) {
+    transform: rotate(1deg) translateY(20px);
+  }
+
+  // Meme Investor
+  & > *:nth-child(3) {
+    transform: rotate(-1deg) translateY(-20px);
+  }
+
+  // Crypto Consulting
+  & > *:nth-child(4) {
+    transform: rotate(0.5deg) translateY(-60px);
+  }
+
+  // Digital Wallet
+  & > *:nth-child(5) {
+    transform: rotate(-3deg) translateY(-10px);
+  }
+
+  // EsperTech
+  & > *:last-child {
+    transform: rotate(3deg) translateY(0px);
+  }
+
+  .polaroid {
+    position: relative;
+    padding: 40px 20px 130px 20px;
+    background-color: $white;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px 3px rgba(0, 0, 0, 0.6);
+    will-change: transform;
+
+    @include mq1557 {
+      padding: 40px 20px 115px 20px;
+    }
+
+    @include mq499 {
+      padding: 20px 15px 90px 15px;
+    }
+
+    .tags {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      pointer-events: none;
+      user-select: none;
+      margin-bottom: 10px;
+
+      @include mq499 {
+        top: -1px;
+      }
+
+      span {
+        display: inline-block;
+        text-transform: uppercase;
+        @include dosisMedium();
+        letter-spacing: 1.37px;
+        font-size: 9.5px;
+        color: $white;
+        mix-blend-mode: difference;
+
+        &:not(:last-of-type) {
+          margin-right: 9px;
+        }
+      }
+    }
+
+    .thumbnail-container {
+      position: relative;
+      height: 364px;
+      width: 644px;
+      user-select: none;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+
+      @include mq1557 {
+        height: calc(364px * 0.75);
+        width: calc(644px * 0.75);
+      }
+
+      @include mq638 {
+        height: calc(364px * 0.6);
+        width: calc(644px * 0.6);
+      }
+
+      @include mq499 {
+        height: calc(364px * 0.45);
+        width: calc(644px * 0.45);
+      }
+
+      // glint bottom
+      &:before {
+        z-index: $zIndex-2;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+        background-color: $white;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        opacity: 0.02;
+      }
+
+      // glint top
+      &:after {
+        z-index: $zIndex-2;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+        background-color: $black;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        opacity: 0.03;
+      }
+
+      .thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .gatsby-image-wrapper {
+        position: initial !important; // fill entire image container
+      }
+    }
+
+    .info {
+      position: absolute;
+      left: 0;
+      bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 25px;
+
+      @include mq499 {
+        bottom: 15px;
+        padding: 0 15px;
+      }
+
+      .title {
+        margin-bottom: 5px;
+        line-height: 0.95;
+        letter-spacing: 0.31px;
+        @include averiaSansLibreBold();
+        font-size: 28px;
+        color: $black;
+
+        @include mq638 {
+          letter-spacing: 0.1px;
+          font-size: 22px;
+        }
+
+        @include mq499 {
+          letter-spacing: 0.08px;
+          font-size: 20px;
+        }
+      }
+
+      .description {
+        opacity: 0.7;
+        letter-spacing: -0.45px;
+        line-height: 1.15;
+        font-size: 15px;
+        @include averiaSansLibreRegular();
+        color: $black;
+
+        @include mq638 {
+          letter-spacing: -0.33px;
+          font-size: 14px;
+        }
+
+        @include mq499 {
+          letter-spacing: -0.2px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

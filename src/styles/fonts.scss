@@ -1,0 +1,28 @@
+// use client's local font rather than download if it is already installed on their computer
+
+@font-face {
+  font-family: "AveriaSansLibre";
+  font-display: block;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Averia Sans Libre Regular"), local("AveriaSansLibre-Regular"),
+    url("/fonts/AveriaSansLibre-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AveriaSansLibre";
+  font-display: block;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Averia Sans Libre Bold"), local("AveriaSansLibre-Bold"),
+    url("/fonts/AveriaSansLibre-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Dosis";
+  font-display: block;
+  font-weight: 500;
+  font-style: normal;
+  src: local("Dosis Medium"), local("Dosis-Medium"),
+    url("/fonts/Dosis-medium.ttf") format("truetype");
+}

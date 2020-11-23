@@ -1,0 +1,33 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  h1 {
+    margin-bottom: 10px;
+    line-height: 100%;
+    letter-spacing: 0.31px;
+    @include averiaSansLibreBold();
+    font-size: 28px;
+  }
+
+  button {
+    z-index: $zIndex-2;
+    position: relative;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    span {
+      text-transform: uppercase;
+      letter-spacing: 1.37px;
+      @include dosisMedium();
+      font-size: 9.5px;
+      color: $white;
+      mix-blend-mode: difference;
+    }
+  }
+}

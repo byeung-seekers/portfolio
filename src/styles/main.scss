@@ -1,0 +1,62 @@
+// global
+@import "./mediaQueries.scss";
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "../components/Layout/Noise/Noise.styles.scss";
+@import "../components/Layout/Cursor/Cursor.styles.scss";
+@import "../components/Layout/Layout.styles.scss";
+@import "../components/Layout/Decorations/Decorations.styles.scss";
+
+// home page
+@import "../components/Pages/HomePage/Name/Name.styles.scss";
+@import "../components/Pages/HomePage/Modal/Modal.styles.scss";
+@import "../components/Pages/HomePage/Thumbnails/Thumbnails.styles.scss";
+@import "../components/Pages/HomePage/Contact/Contact.styles.scss";
+@import "../components/Pages/HomePage/Contact/EmailConvo/EmailConvo.styles.scss";
+@import "../components/Pages/HomePage/Footer/Footer.styles.scss";
+
+// error page
+@import "../components/Pages/ErrorPage/ErrorPage.styles.scss";
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  cursor: none !important;
+
+  button,
+  a {
+    cursor: none !important;
+  }
+
+  a {
+    text-decoration-line: none;
+  }
+}
+
+body {
+  overscroll-behavior-y: none; // disable chrome scroll edge bounce
+  -ms-overflow-style: none;
+  background-color: $bg;
+  font-family: $averiaSansLibre, $dosis, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $white;
+}
+
+// text highlight color
+::selection {
+  background-color: $yellow;
+}
+
+// hide browser scroll bar
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,290 @@
+.modal-container {
+  z-index: $zIndex-1;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  .buttons {
+    z-index: $zIndex-1;
+    position: fixed;
+    top: 50%;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+
+    @include mq638 {
+      bottom: 35%;
+    }
+
+    button {
+      position: relative;
+      height: 80px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: initial !important;
+      outline: none;
+      border: 1px solid $modalUIgray;
+      border-radius: 100%;
+      backdrop-filter: saturate(180%) blur(20px);
+      background: rgba(255, 255, 255, 0.035);
+
+      @include mq1557 {
+        height: 60px;
+        width: 60px;
+      }
+
+      @include mq422 {
+        height: 47px;
+        width: 47px;
+      }
+
+      &:first-of-type {
+        margin-right: 30px;
+
+        svg {
+          transform-origin: center;
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 30%;
+        fill: $modalUIgray;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .social {
+    z-index: $zIndex-1;
+    position: fixed;
+    bottom: 3vh;
+    display: flex;
+    list-style-type: none;
+
+    @include mq638 {
+      bottom: 4.2vh;
+      right: 20px;
+      flex-direction: column;
+    }
+
+    &:hover > .icon > a {
+      opacity: 0.25;
+    }
+
+    &:hover > .icon > a:hover {
+      opacity: 1;
+    }
+
+    .icon {
+      padding: 2px 4px;
+      border: 1px solid $modalUIgray;
+      border-radius: 3px;
+      backdrop-filter: saturate(180%) blur(20px);
+      background-color: rgba(0, 0, 0, 0.2);
+
+      &:not(:last-of-type) {
+        margin-right: 8px;
+
+        @include mq638 {
+          margin-right: 0px;
+          margin-bottom: 7px;
+        }
+      }
+
+      a {
+        display: block;
+        user-select: none;
+        text-transform: uppercase;
+        letter-spacing: 1.68px;
+        @include dosisMedium();
+        font-size: 12px;
+        color: white;
+        transition: 0.15s ease-out opacity;
+      }
+    }
+  }
+
+  .modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    width: 90%;
+    margin: 2.5vh 0 2vh 0;
+    padding: 100px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transform-origin: top;
+    will-change: transform;
+
+    @include mq638 {
+      width: 97%;
+    }
+
+    @include mq499 {
+      margin: 2.5vh 0 15vh 0;
+    }
+
+    @include mq499 {
+      padding: 80px 0 50px 0;
+    }
+
+    .drag-close {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      p {
+        padding-top: 2px;
+        padding-bottom: 35px;
+        opacity: 0.22;
+        text-transform: uppercase;
+        letter-spacing: 1.37px;
+        @include dosisMedium();
+        font-size: 9.5px;
+        color: $white;
+        mix-blend-mode: difference;
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 60px;
+
+      svg {
+        height: 20px;
+        width: 20px;
+        fill: $modalUIgray;
+      }
+
+      @include mq499 {
+        top: 23px;
+        right: 28px;
+
+        svg {
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+
+    .info {
+      width: 100%;
+      user-select: none;
+      pointer-events: none;
+      color: $white;
+      mix-blend-mode: difference;
+
+      h1 {
+        max-width: 70%;
+        margin: 0 auto 21.5px auto;
+        text-align: center;
+        line-height: 0.95;
+        letter-spacing: 1.2px;
+        @include averiaSansLibreBold();
+        font-size: 42px;
+        color: $white;
+        mix-blend-mode: difference;
+
+        @include mq1225 {
+          margin: 0 auto 16px auto;
+          letter-spacing: 1.1px;
+          font-size: 32px;
+        }
+
+        @include mq638 {
+          max-width: 88%;
+          margin: 0 auto 13px auto;
+          line-height: 1.15;
+          letter-spacing: 0.6px;
+          font-size: 28px;
+        }
+      }
+
+      p {
+        max-width: 60%;
+        margin: 0 auto;
+        opacity: 0.55;
+        text-align: center;
+        letter-spacing: 0.14px;
+        @include averiaSansLibreRegular();
+        font-size: 18px;
+        color: $white;
+        mix-blend-mode: difference;
+
+        @include mq1225 {
+          letter-spacing: 0.35px;
+          font-size: 16px;
+        }
+
+        @include mq638 {
+          max-width: 75%;
+          line-height: 1.4;
+          letter-spacing: 0.12px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .link {
+      margin-top: 50px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid $yellow;
+      text-decoration-line: none;
+      opacity: 0.55;
+      text-transform: uppercase;
+      line-height: 16px;
+      letter-spacing: 0.4px;
+      @include dosisMedium();
+      font-size: 14px;
+      color: $white;
+      mix-blend-mode: difference;
+    }
+
+    .imgs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      pointer-events: none;
+      user-select: none;
+
+      img {
+        display: block;
+        width: 80%;
+        border-radius: 3px;
+
+        @include mq638 {
+          width: 100%;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

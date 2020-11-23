@@ -1,0 +1,304 @@
+.decorations {
+  z-index: $zIndex-bottom;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.airpods {
+  position: absolute;
+  left: 0;
+  bottom: 480px;
+  height: calc(53.5px * 5);
+  width: calc(44.3px * 5);
+  border-radius: 50px;
+  background-color: $white;
+  transform: translateX(-25%) rotate(7deg);
+  box-shadow: -6px 7px 10px rgba(0, 0, 0, 0.4),
+    inset 25px -30px 25px rgba(0, 0, 0, 0.23);
+
+  @include mq1557 {
+    transform: translateX(-25%) rotate(7deg) scale(0.65);
+  }
+
+  @include mq638 {
+    bottom: 200px;
+    transform: translateX(-38%) rotate(7deg) scale(0.45);
+  }
+
+  .lid {
+    position: relative;
+    height: 25%;
+    width: 100%;
+    border-bottom: 2px solid $airpodsBorder;
+
+    &:before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: 0;
+      height: 18px;
+      width: 55%;
+      border-radius: 20px;
+      transform: translateX(-50%) translateY(50%);
+      box-shadow: inset -2px 3px 5px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  .bottom {
+    height: 75%;
+    width: 100%;
+
+    .dot {
+      height: 5px;
+      width: 5px;
+      margin: 20px auto 0 auto;
+      border-radius: 100%;
+      background-color: $airpodsDot;
+    }
+  }
+}
+
+.papers-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-44%, 60%);
+
+  @include mq1557 {
+    transform: translate(-60%, 35%) scale(0.5);
+  }
+
+  @include mq638 {
+    transform: translate(-60%, 50%) scale(0.35);
+  }
+
+  .papers {
+    position: relative;
+    display: flex;
+    height: calc(297px * 3);
+    width: calc(210px * 3);
+    transform: rotate(-8deg);
+
+    .paper {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 1.3px;
+      background: linear-gradient(
+        to bottom,
+        $paperGradientLight 0%,
+        $paperGradientDark 100%
+      );
+      box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
+
+      &:last-of-type {
+        transform: rotate(2deg);
+      }
+    }
+  }
+}
+
+.pen-container {
+  position: absolute;
+  left: 390px;
+  bottom: 0;
+  transform: translateY(60%);
+
+  @include mq1557 {
+    left: 100px;
+    transform: translateY(0%) scale(0.6);
+  }
+
+  @include mq638 {
+    left: 43px;
+    transform: translateY(50%) scale(0.35);
+  }
+
+  .pen {
+    position: relative;
+    height: calc(544px * 0.95);
+    width: calc(55px * 0.95);
+    transform: rotate(-8deg);
+
+    .tip {
+      height: 5%;
+      width: 53%;
+      margin: 0 auto;
+      border-top: 2px solid $white;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      box-shadow: inset 5px -3.5px 10px rgba(0, 0, 0, 0.25);
+      background-color: $paperGradientDark;
+    }
+
+    .upper {
+      position: relative;
+      height: 36%;
+      width: 71%;
+      margin: 0 auto;
+      border-top: 3px solid $white;
+      border-bottom: 1px solid $penUpperBorderBottom;
+      border-top-right-radius: 3px;
+      box-shadow: inset 10px 0px 20px rgba(0, 0, 0, 0.2);
+      background-color: $paperGradientDark;
+
+      .clip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 85%;
+        width: 56%;
+        overflow: hidden;
+        border-right: 2.5px solid $penClipBorderRight;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 3px 0.8px 3.5px rgba(0, 0, 0, 0.1);
+        background-color: inherit;
+        transform: translateX(-50%) translateY(-3px);
+
+        // clip shadow
+        &:before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          box-shadow: inset 8.5px -10px 13px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+
+    .bottom {
+      height: 56%;
+      width: 71%;
+      margin: 0 auto;
+      border-bottom-left-radius: 43%;
+      border-bottom-right-radius: 43%;
+      box-shadow: inset 10px -50px 25px rgba(0, 0, 0, 0.35);
+      background-color: $paperGradientDark;
+    }
+
+    .ballpoint {
+      position: relative;
+      height: 1.65%;
+      width: 10%;
+      margin: 0 auto;
+      border-bottom-left-radius: 250%;
+      border-bottom-right-radius: 250%;
+      box-shadow: inset 1px -1px 1px rgba(0, 0, 0, 0.6);
+      background-color: $ballpointBackground;
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 1.5px;
+        background-color: $ballpointInk;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.coffee-container {
+  position: absolute;
+  right: -240px;
+  bottom: -160px;
+
+  @include mq1557 {
+    right: -300px;
+    bottom: -210px;
+    transform: scale(0.65);
+  }
+
+  @include mq638 {
+    right: -310px;
+    bottom: -150px;
+    transform: scale(0.45);
+  }
+
+  .coffee {
+    position: relative;
+    height: 550px;
+    width: 550px;
+
+    .dish {
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      border: 9px solid $white;
+      box-shadow: -15px 15px 35px rgba(0, 0, 0, 0.4),
+        inset 35px -15px 35px rgba(0, 0, 0, 0.3);
+      background: radial-gradient(
+        circle,
+        $paperGradientLight,
+        $paperGradientDark
+      );
+    }
+
+    .cup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 66%;
+      width: 66%;
+      border-radius: 100%;
+      border: 14px solid $white;
+      box-shadow: -10px 15px 30px rgba(0, 0, 0, 0.5),
+        inset -20px 15px 35px rgba(0, 0, 0, 0.25);
+      transform: translate(-50%, -50%) rotate(235deg);
+
+      @include mq638 {
+        transform: translate(-50%, -50%) rotate(75deg);
+      }
+
+      &:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        top: 65%;
+        right: 0;
+        height: 40%;
+        width: 19%;
+        border-radius: 14px;
+        box-shadow: -8px 3px 12px rgba(0, 0, 0, 0.3),
+          inset 4px -3px 10px rgba(0, 0, 0, 0.3);
+        background-color: $white;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .liquid {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 55%;
+      width: 55%;
+      overflow: hidden;
+      border-radius: 100%;
+      background-color: $coffeeDark;
+      transform: translate(-50%, -50%);
+
+      &:before {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        height: 92%;
+        width: 92%;
+        background: linear-gradient(145deg, $coffeeLight, $coffeeDark 35%);
+        border-radius: 100%;
+      }
+    }
+  }
+}

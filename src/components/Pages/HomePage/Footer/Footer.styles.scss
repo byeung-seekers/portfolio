@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 8.5px 0;
+  pointer-events: none;
+  opacity: 0.17;
+  user-select: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.37px;
+  @include dosisMedium();
+  font-size: 9.5px;
+}

@@ -1,0 +1,186 @@
+.email-convo {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  margin: 100px 0 65px 0;
+
+  @include mq638 {
+    width: 90%;
+  }
+
+  @include mq499 {
+    margin: 40px 25px 30px 25px;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .question-container,
+  .response-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .icon-mask {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 103px;
+      width: 103px;
+      min-height: 103px;
+      min-width: 103px;
+      margin-right: 15px;
+      pointer-events: none;
+      user-select: none;
+      overflow: hidden;
+      border-radius: 100%;
+      backdrop-filter: saturate(180%) blur(20px);
+      background-color: rgba(255, 255, 255, 0.035);
+
+      @include mq638 {
+        height: calc(103px * 0.5);
+        width: calc(103px * 0.5);
+        min-height: calc(103px * 0.5);
+        min-width: calc(103px * 0.5);
+        margin-right: 9px;
+      }
+
+      .icon-container {
+        width: 66%;
+
+        @include mq638 {
+          width: 58%;
+        }
+      }
+    }
+
+    .message {
+      position: relative;
+
+      .typing {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        padding: 9px 17px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.11);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        background-color: $black;
+        transform: translateY(-50%);
+
+        .dot {
+          height: 9.5px;
+          width: 9.5px;
+          border-radius: 100%;
+          background-color: rgba(255, 255, 255, 0.15);
+
+          &:not(:last-of-type) {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .user {
+    position: relative;
+    align-self: flex-end;
+
+    form {
+      padding: 7px 7px 7px 23px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background-color: $black;
+      letter-spacing: -0.45px;
+      @include averiaSansLibreRegular();
+      font-size: 15px;
+
+      label {
+        visibility: hidden;
+        opacity: 0;
+        font-size: 0px;
+      }
+
+      input {
+        cursor: none;
+        border: none;
+        outline: none;
+        background: transparent;
+        letter-spacing: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        color: $yellow;
+      }
+
+      button {
+        margin-left: 13px;
+        border: none;
+        outline: none;
+        user-select: none;
+        padding: 12px 19px;
+        border-radius: 9px;
+        background-color: $white;
+
+        svg {
+          display: block;
+          width: 23px;
+        }
+      }
+    }
+
+    .success {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: flex;
+      align-items: center;
+      transform: translateY(-50%);
+
+      .reset {
+        margin-right: 8px;
+        opacity: 0.6;
+        user-select: none;
+        text-transform: uppercase;
+        letter-spacing: 1.37px;
+        @include dosisMedium();
+        font-size: 9.5px;
+      }
+
+      .sent {
+        padding: 9px 17px;
+        pointer-events: none;
+        user-select: none;
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        background-color: $yellow;
+        letter-spacing: -0.45px;
+        @include averiaSansLibreRegular();
+        font-size: 15px;
+        color: $black;
+      }
+    }
+  }
+
+  .question,
+  .response {
+    padding: 9px 17px;
+    pointer-events: none;
+    user-select: none;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    background-color: $black;
+    transform-origin: bottom left;
+    letter-spacing: -0.45px;
+    @include averiaSansLibreRegular();
+    font-size: 15px;
+    color: $white;
+  }
+}
