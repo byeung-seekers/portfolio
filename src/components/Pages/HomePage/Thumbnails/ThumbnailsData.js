@@ -10,8 +10,8 @@ export const THUMBNAILS_DATA = [
     link: "https://pocket-trader.com",
     url: PT,
     category: ["design", "dev", "website"],
-    title: "Mobile Trading App (WIP)",
-    description: "Marketing website",
+    title: "Trading App",
+    description: "Prototype website",
     modalBg: "black",
   },
   {
@@ -31,7 +31,7 @@ export const THUMBNAILS_DATA = [
     url:
       "https://cdn.dribbble.com/users/2717568/screenshots/10598198/media/d436c2e59f873a62c688e5a7297751a7.jpg",
     category: ["design", "website"],
-    title: "Memes Tracking AI bot",
+    title: "Memes Tracker",
     description: "Concept marketing website",
     modalBg: "#272b37",
   },

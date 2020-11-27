@@ -12,9 +12,9 @@ const Cursor = () => {
   const y = useMotionValue(200)
 
   useLayoutEffect(() => {
-    const handleMouseMove = e => {
-      x.set(e.clientX - 20)
-      y.set(e.clientY - 20)
+    const handleMouseMove = (e) => {
+      x.set(e.clientX - 25)
+      y.set(e.clientY - 25)
     }
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)

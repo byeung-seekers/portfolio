@@ -6,19 +6,19 @@ export const cursorVariant = {
   hidden: { opacity: 0, scale: 0 },
   default: {
     opacity: 1,
-    scale: 1,
+    scale: 0.4,
     transition: { type: "spring", damping: 9.3 },
   },
   scaleL: {
-    scale: 3,
+    scale: 1,
     transition: { type: "spring", damping: 9.3 },
   },
   scaleM: {
-    scale: 2.2,
+    scale: 0.8,
     transition: { type: "spring", damping: 9.3 },
   },
   scaleS: {
-    scale: 1.6,
+    scale: 0.6,
     transition: { type: "spring", damping: 9.3 },
   },
 }
