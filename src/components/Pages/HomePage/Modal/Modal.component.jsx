@@ -31,6 +31,7 @@ const Modal = () => {
         siteMetadata {
           behance
           github
+          codepen
           codesandbox
           linkedin
         }
@@ -38,11 +39,18 @@ const Modal = () => {
     }
   `)
 
-  const { behance, github, codesandbox, linkedin } = data.site.siteMetadata
+  const {
+    behance,
+    github,
+    codepen,
+    codesandbox,
+    linkedin,
+  } = data.site.siteMetadata
 
   const SOCIALS = [
     { name: "Behance", link: behance },
     { name: "GitHub", link: github },
+    { name: "CodePen", link: codepen },
     { name: "CodeSandbox", link: codesandbox },
     { name: "LinkedIn", link: linkedin },
   ]
@@ -63,8 +71,8 @@ const Modal = () => {
 
   const urls = [url, url2, url3, url4]
 
-  const prev = () => setModalId(prevState => prevState - 1)
-  const next = () => setModalId(prevState => prevState + 1)
+  const prev = () => setModalId((prevState) => prevState - 1)
+  const next = () => setModalId((prevState) => prevState + 1)
 
   const dragCloseTrigger = 20
   const y = useMotionValue(0)
@@ -79,7 +87,7 @@ const Modal = () => {
     const escapeKey = 27
     const leftKey = 37
     const rightKey = 39
-    const handleKeyPress = e => {
+    const handleKeyPress = (e) => {
       switch (e.keyCode) {
         case escapeKey:
           setModalOpen(false)
@@ -95,9 +103,10 @@ const Modal = () => {
       }
     }
     modalOpen
-      ? document.addEventListener("keydown", e => handleKeyPress(e))
-      : document.removeEventListener("keydown", e => handleKeyPress(e))
-    return () => document.removeEventListener("keydown", e => handleKeyPress(e))
+      ? document.addEventListener("keydown", (e) => handleKeyPress(e))
+      : document.removeEventListener("keydown", (e) => handleKeyPress(e))
+    return () =>
+      document.removeEventListener("keydown", (e) => handleKeyPress(e))
   }, [modalOpen])
 
   return (
@@ -150,7 +159,7 @@ const Modal = () => {
             exit="leaving"
             className="social"
           >
-            {SOCIALS.map(social => (
+            {SOCIALS.map((social) => (
               <motion.li
                 key={social.name}
                 variants={modalSocialVariant}

@@ -3,10 +3,11 @@ module.exports = {
     title: `My Portfolio`,
     titleTemplate: `%s - beewai`,
     description: `A collection of work from beewai.`,
-    siteUrl: `https://beewai-portfolio.netlify.app`,
+    siteUrl: `https://beewai.com`,
     behance: "http://behance.net/beewai",
     github: "https://github.com/byeung-seekers",
     linkedin: "https://www.linkedin.com/in/yeungbenjamin",
+    codepen: "https://codepen.io/beewai",
     codesandbox: "https://codesandbox.io/u/byeung-seekers",
   },
   plugins: [
@@ -27,6 +28,15 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images/thumbnails`,
         name: `thumbnails`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Portfolio`,
+        short_name: `Portfolio`,
+        start_url: `/`,
+        icon: `src/images/header/memoji.png`,
       },
     },
   ],

@@ -26,7 +26,7 @@
     transform: translateX(-25%) rotate(7deg) scale(0.65);
   }
 
-  @include mq638 {
+  @include mq857 {
     bottom: 200px;
     transform: translateX(-38%) rotate(7deg) scale(0.45);
   }
@@ -74,7 +74,7 @@
     transform: translate(-60%, 35%) scale(0.5);
   }
 
-  @include mq638 {
+  @include mq857 {
     transform: translate(-60%, 50%) scale(0.35);
   }
 
@@ -115,7 +115,7 @@
     transform: translateY(0%) scale(0.6);
   }
 
-  @include mq638 {
+  @include mq857 {
     left: 43px;
     transform: translateY(50%) scale(0.35);
   }
@@ -221,7 +221,7 @@
     transform: scale(0.65);
   }
 
-  @include mq638 {
+  @include mq857 {
     right: -310px;
     bottom: -150px;
     transform: scale(0.45);
@@ -258,7 +258,7 @@
         inset -20px 15px 35px rgba(0, 0, 0, 0.25);
       transform: translate(-50%, -50%) rotate(235deg);
 
-      @include mq638 {
+      @include mq857 {
         transform: translate(-50%, -50%) rotate(75deg);
       }
 

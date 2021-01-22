@@ -4,7 +4,7 @@
   width: 560px;
   margin: 100px 0 65px 0;
 
-  @include mq638 {
+  @include mq857 {
     width: 90%;
   }
 
@@ -38,7 +38,7 @@
       backdrop-filter: saturate(180%) blur(20px);
       background-color: rgba(255, 255, 255, 0.035);
 
-      @include mq638 {
+      @include mq857 {
         height: calc(103px * 0.5);
         width: calc(103px * 0.5);
         min-height: calc(103px * 0.5);
@@ -49,7 +49,7 @@
       .icon-container {
         width: 66%;
 
-        @include mq638 {
+        @include mq857 {
           width: 58%;
         }
       }

@@ -10,7 +10,9 @@ import Noise from "./src/components/Layout/Noise/Noise.component"
 import Cursor from "./src/components/Layout/Cursor/Cursor.component"
 import Layout from "./src/components/Layout/Layout.component"
 
-smoothscroll.polyfill()
+export const onClientEntry = () => {
+  smoothscroll.polyfill()
+}
 
 export const wrapPageElement = ({ element }) => (
   <CursorProvider>
