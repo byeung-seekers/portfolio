@@ -43,7 +43,7 @@ const EmailConvo = () => {
   const [qAnimComplete, setQAnimComplete] = useState(false)
 
   // form handling
-  const handleEmailInput = e => {
+  const handleEmailInput = (e) => {
     setEmailInput({ [e.target.name]: e.target.value })
   }
 
@@ -52,7 +52,7 @@ const EmailConvo = () => {
     setEmailSubmitted(false)
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
     fetch("/", {
@@ -64,7 +64,7 @@ const EmailConvo = () => {
       }),
     })
       .then(() => setEmailSubmitted(true))
-      .catch(error => console.log(error))
+      .catch((error) => console.log(error))
   }
 
   // animation frames
@@ -131,7 +131,7 @@ const EmailConvo = () => {
             animate={qQuestionAnim}
             className="question"
           >
-            Wanna work together? Leave your email, I'll say hi.
+            What's up? Leave your email, I'll say hi.
           </motion.h3>
         </div>
       </div>
@@ -164,7 +164,7 @@ const EmailConvo = () => {
             id="email"
             autoComplete="off"
             value={emailInput.email}
-            onChange={e => handleEmailInput(e)}
+            onChange={(e) => handleEmailInput(e)}
             placeholder="Leave your email..."
             required
           />

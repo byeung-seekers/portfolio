@@ -110,7 +110,7 @@
         width: calc(644px * 0.75);
       }
 
-      @include mq638 {
+      @include mq857 {
         height: calc(364px * 0.6);
         width: calc(644px * 0.6);
       }
@@ -187,7 +187,7 @@
         font-size: 28px;
         color: $black;
 
-        @include mq638 {
+        @include mq857 {
           letter-spacing: 0.1px;
           font-size: 22px;
         }
@@ -206,7 +206,7 @@
         @include averiaSansLibreRegular();
         color: $black;
 
-        @include mq638 {
+        @include mq857 {
           letter-spacing: -0.33px;
           font-size: 14px;
         }

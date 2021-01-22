@@ -17,6 +17,7 @@ const Contact = () => {
         siteMetadata {
           behance
           github
+          codepen
           codesandbox
           linkedin
         }
@@ -24,13 +25,20 @@ const Contact = () => {
     }
   `)
 
-  const { behance, github, codesandbox, linkedin } = data.site.siteMetadata
+  const {
+    behance,
+    github,
+    codepen,
+    codesandbox,
+    linkedin,
+  } = data.site.siteMetadata
 
   const socials = [
     { id: 0, name: "Behance", link: behance },
     { id: 1, name: "Github", link: github },
-    { id: 2, name: "CodeSandbox", link: codesandbox },
-    { id: 3, name: "LinkedIn", link: linkedin },
+    { id: 3, name: "CodePen", link: codepen },
+    { id: 4, name: "CodeSandbox", link: codesandbox },
+    { id: 5, name: "LinkedIn", link: linkedin },
   ]
 
   const { setScrolledToContact } = useHomePageContext()
@@ -51,7 +59,7 @@ const Contact = () => {
         animate={contactInView ? "onScreen" : "notOnScreen"}
         className="social"
       >
-        {socials.map(social => (
+        {socials.map((social) => (
           <a
             key={social.id}
             onMouseEnter={scaleMCursor}

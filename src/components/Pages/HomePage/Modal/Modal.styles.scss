@@ -26,7 +26,7 @@
     align-items: center;
     transform: translateY(-50%);
 
-    @include mq638 {
+    @include mq857 {
       bottom: 35%;
     }
 
@@ -81,7 +81,7 @@
     display: flex;
     list-style-type: none;
 
-    @include mq638 {
+    @include mq857 {
       bottom: 4.2vh;
       right: 20px;
       flex-direction: column;
@@ -105,7 +105,7 @@
       &:not(:last-of-type) {
         margin-right: 8px;
 
-        @include mq638 {
+        @include mq857 {
           margin-right: 0px;
           margin-bottom: 7px;
         }
@@ -139,7 +139,7 @@
     transform-origin: top;
     will-change: transform;
 
-    @include mq638 {
+    @include mq857 {
       width: 97%;
     }
 
@@ -215,7 +215,7 @@
           font-size: 32px;
         }
 
-        @include mq638 {
+        @include mq857 {
           max-width: 88%;
           margin: 0 auto 13px auto;
           line-height: 1.15;
@@ -240,7 +240,7 @@
           font-size: 16px;
         }
 
-        @include mq638 {
+        @include mq857 {
           max-width: 75%;
           line-height: 1.4;
           letter-spacing: 0.12px;
@@ -277,7 +277,7 @@
         width: 80%;
         border-radius: 3px;
 
-        @include mq638 {
+        @include mq857 {
           width: 100%;
         }
 

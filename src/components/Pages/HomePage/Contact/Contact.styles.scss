@@ -11,17 +11,17 @@
     overflow: hidden;
     padding: 20px 0;
 
-    @include mq638 {
+    @include mq857 {
       flex-direction: column;
       align-items: center;
     }
 
     a {
-      // dribbble
+      // behance
       &:first-of-type {
         transform: translateY(3px) rotate(-5deg);
 
-        @include mq638 {
+        @include mq857 {
           transform: translateY(0) rotate(-2deg);
         }
       }
@@ -30,16 +30,25 @@
       &:nth-of-type(2) {
         transform: translateY(-8px) rotate(-2.5deg);
 
-        @include mq638 {
+        @include mq857 {
           transform: translateY(0) rotate(1deg);
         }
       }
 
-      // codesandbox
+      // codepen
       &:nth-of-type(3) {
+        transform: translateY(-13px);
+
+        @include mq857 {
+          transform: rotate(0.5deg);
+        }
+      }
+
+      // codesandbox
+      &:nth-of-type(4) {
         transform: translateY(-8px) rotate(2.5deg);
 
-        @include mq638 {
+        @include mq857 {
           transform: translateY(0) rotate(2deg);
         }
       }
@@ -48,13 +57,13 @@
       &:last-of-type {
         transform: translateY(6px) rotate(5deg);
 
-        @include mq638 {
+        @include mq857 {
           transform: translateY(0) rotate(1deg);
         }
       }
 
       &:not(:first-of-type) {
-        @include mq638 {
+        @include mq857 {
           margin-top: 25px;
         }
       }
@@ -62,7 +71,7 @@
       &:not(:last-of-type) {
         margin-right: 25px;
 
-        @include mq638 {
+        @include mq857 {
           margin-right: 0;
         }
       }
