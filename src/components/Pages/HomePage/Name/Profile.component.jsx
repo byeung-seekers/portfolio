@@ -24,7 +24,7 @@ const Profile = () => {
     >
       <motion.div variants={infoVariant} className="info-mask">
         <motion.h3 style={{ opacity, y: spring }}>
-          User Experience Developer @ SEEKERS Capital Group
+          UX Developer @ SEEKERS Capital Group
         </motion.h3>
       </motion.div>
       <motion.div variants={infoVariant} className="info-mask">
