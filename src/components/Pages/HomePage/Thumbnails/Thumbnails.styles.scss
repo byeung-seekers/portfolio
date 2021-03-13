@@ -23,28 +23,33 @@
     grid-row-gap: 70px;
   }
 
-  // Pocket Trader
+  // Altair Studios
   & > *:first-child {
     transform: rotate(-2deg) translateY(-10px);
   }
 
-  // Game Changer
+  // Pocket Trader
   & > *:nth-child(2) {
     transform: rotate(1deg) translateY(20px);
   }
 
-  // Meme Investor
+  // Game Changer
   & > *:nth-child(3) {
+    transform: rotate(1deg) translateY(20px);
+  }
+
+  // Meme Tracker
+  & > *:nth-child(4) {
     transform: rotate(-1deg) translateY(-20px);
   }
 
   // Crypto Consulting
-  & > *:nth-child(4) {
+  & > *:nth-child(5) {
     transform: rotate(0.5deg) translateY(-60px);
   }
 
   // Digital Wallet
-  & > *:nth-child(5) {
+  & > *:nth-child(6) {
     transform: rotate(-3deg) translateY(-10px);
   }
 

@@ -26,14 +26,14 @@ const Thumbnail = ({ index, fluid, originalName }) => {
         onClick={() => handleModalOpen(id)}
         onMouseEnter={scaleLCursor}
         onMouseLeave={defaultCursor}
-        onMouseMove={e => parallaxMouseMove(e, 120, polaroidAnim)}
+        onMouseMove={(e) => parallaxMouseMove(e, 120, polaroidAnim)}
         animate={polaroidAnim}
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.97 }}
         className="polaroid"
       >
         <div className="tags">
-          {category.map(tag => (
+          {category.map((tag) => (
             <span key={`${tag} ${index}`} variants={tagVariant}>
               {tag}
             </span>
@@ -45,7 +45,7 @@ const Thumbnail = ({ index, fluid, originalName }) => {
             <Img
               fluid={fluid}
               onLoad={addLoadedImageCount}
-              onError={error => handleImageLoadingFailure(error)}
+              onError={(error) => handleImageLoadingFailure(error)}
               draggable={false}
               alt={originalName}
             />

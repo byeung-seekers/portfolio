@@ -212,7 +212,7 @@ const Modal = () => {
                 Live
               </a>
             )}
-            <div className="imgs">
+            {/* <div className="imgs">
               {urls.map((url, index) => {
                 if (!url) return
                 return (
@@ -223,7 +223,7 @@ const Modal = () => {
                   />
                 )
               })}
-            </div>
+            </div> */}
           </motion.div>
         </motion.aside>
       )}
