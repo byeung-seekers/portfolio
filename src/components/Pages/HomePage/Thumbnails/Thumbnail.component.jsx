@@ -12,18 +12,18 @@ const Thumbnail = ({ index, fluid, originalName }) => {
   const {
     addLoadedImageCount,
     handleImageLoadingFailure,
-    handleModalOpen,
+    // handleModalOpen,
   } = useHomePageContext()
   const { scaleLCursor, defaultCursor } = useCursorContext()
 
-  const { id, category, title, description } = THUMBNAILS_DATA[index]
+  const { link, category, title, description } = THUMBNAILS_DATA[index]
 
   const polaroidAnim = useAnimation()
 
   return (
-    <div>
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <motion.div
-        onClick={() => handleModalOpen(id)}
+        // onClick={() => handleModalOpen(id)}
         onMouseEnter={scaleLCursor}
         onMouseLeave={defaultCursor}
         onMouseMove={(e) => parallaxMouseMove(e, 120, polaroidAnim)}
@@ -57,7 +57,7 @@ const Thumbnail = ({ index, fluid, originalName }) => {
           <p className="description">{description}</p>
         </div>
       </motion.div>
-    </div>
+    </a>
   )
 }
 
