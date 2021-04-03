@@ -30,6 +30,21 @@ module.exports = {
         name: `thumbnails`,
       },
     },
+    `gatsby-plugin-optimize-svgs`,
+    {
+      resolve: `gatsby-plugin-minify-html`,
+      options: {
+        config: {
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+        },
+      },
+    },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,5 +54,6 @@ module.exports = {
         icon: `src/images/header/memoji.png`,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }
