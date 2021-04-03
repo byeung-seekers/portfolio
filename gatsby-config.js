@@ -5,7 +5,7 @@ module.exports = {
     description: `A collection of work from beewai.`,
     siteUrl: `https://beewai.com`,
     behance: "http://behance.net/beewai",
-    github: "https://github.com/byeung-seekers",
+    github: "https://github.com/beewai2021",
     linkedin: "https://www.linkedin.com/in/yeungbenjamin",
     codepen: "https://codepen.io/beewai",
     codesandbox: "https://codesandbox.io/u/byeung-seekers",
